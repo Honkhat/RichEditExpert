@@ -1,0 +1,24 @@
+以CF_RTF格式复制到Clipboard中，有时可以粘贴到RichEdit中去，有时不能，但是可以粘贴到word中去?
+以为SetClipboardData()前EmptyClipboard()就可以了，实际不可以.
+
+试试CF_RTFTEXTOBJ>?
+
+
+https://www.cnblogs.com/open-fu/p/3337810.html CreateCompatibleDC 与 CreateCompatibleBitmap 小小结
+https://bbs.csdn.net/topics/391069257 如何将BITMAP结构体转成HBITMAP
+http://blog.sina.com.cn/s/blog_67bef9bc0100wq43.html 将纯文本转换为RTF
+https://bbs.csdn.net/topics/390197637 RTF文件，如何解析
+http://www.pindari.com/rtf1.html rtf Simple tutorial 
+http://www.biblioscape.com/rtf15_spec.htm Rich Text Format (RTF) Version 1.5 Specification
+https://msdn.microsoft.com/zh-cn/library/y0t81s0f.aspx Example EM_FORMATRANGE EM_DISPLAYBAND
+Rich Edit 控件注册两个剪贴板格式：丰富的文本格式和称为丰富编辑文本和对象的格式。 使用 RegisterClipboardFormat 函数，应用程序可注册这些格式，指定 CF_RTF 和 CF_RETEXTOBJ 值。
+https://msdn.microsoft.com/zh-cn/library/y0e1s9e6.aspx
+
+https://stackoverflow.com/questions/1163369/how-to-convert-gdis-image-into-bitmap
+https://www.cnblogs.com/findumars/p/4999198.html rich edit 打印预览
+http://www.xuebuyuan.com/2739643.html 改进duilib richedit
+https://bbs.csdn.net/topics/370054853 如何将richedit的内容输出到画布上
+https://stackoverflow.com/questions/7485274/clipboard-data-set-as-cf-text-cant-be-retrieved-correctly-as-cf-unicodetext Clipboard data set as CF_TEXT can't be retrieved correctly as CF_UNICODETEXT
+http://www.fx114.net/qa-33-922.aspx delphi richedit特性利用
+https://www.codeguru.com/cpp/controls/richedit/article.php/c2407/Transparent-RichEditCtrl.htm 
+

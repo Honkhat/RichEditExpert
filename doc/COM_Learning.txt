@@ -1,0 +1,156 @@
+Polygon
+	以管理员权限运行VisualStudio (2010 for now)
+	ATL项目
+	Application Type:dll; 其他支持选项都不勾选(MFC/COM+ 1.0等);
+	工程属性-->链接器-->逐用户重定向: ?
+	添加-->类-->ATL控件:
+	ShortName:PolyCtl,其它名称自动生成;
+	选项: 勾选连接点;
+	外观: 勾选可插入;
+	常用属性: 双击FillColor;
+	VS "生成"-->生成Polygon
+	类视图,右键接口IPolyCtl,添加属性: SHORT,属性名称 Sides，点击OK.
+	PolyCtl.h类的定义中，添加short m_nSides;(能看到m_clrFillColor的定义);
+	PolyCtl.h 构造函数添加: 
+		:m_nSides(3);
+		m_clrFillColor = RGB(0, 0xFF, 0);
+	PolyCtl.cpp 实现get_Sides() 和 Put_Sides()
+		STDMETHODIMP CPolyCtl::get_Sides(SHORT* pVal)
+		{
+			*pVal = m_nSides;
+			FireViewChange();
+			return S_OK;
+		}
+
+
+		STDMETHODIMP CPolyCtl::put_Sides(SHORT newVal)
+		{
+			if (2 < newVal && newVal < 101)
+			{
+				m_nSides = newVal;
+				return S_OK;
+			}
+			else
+			{
+				return Error(_T("Shape must have between 3 and 100 sides"));
+			}
+			return S_OK;
+		}
+	PolyCtl.h添加代码:
+		(#pragma once)
+		#include <math.h>
+
+		void CalcPoints(const RECT& rc);
+
+		POINT m_arrPoint[100];
+
+		替换OnDraw()方法:
+			HRESULT CPolyCtl::OnDraw(ATL_DRAWINFO& di)
+			{
+			   RECT& rc = *(RECT*)di.prcBounds;
+			   HDC hdc  = di.hdcDraw;
+
+			   COLORREF    colFore;
+			   HBRUSH      hOldBrush, hBrush;
+			   HPEN        hOldPen, hPen;
+
+			   // Translate m_colFore into a COLORREF type
+			   OleTranslateColor(m_clrFillColor, NULL, &colFore);
+
+			   // Create and select the colors to draw the circle
+			   hPen = (HPEN)GetStockObject(BLACK_PEN);
+			   hOldPen = (HPEN)SelectObject(hdc, hPen);
+			   hBrush = (HBRUSH)GetStockObject(WHITE_BRUSH);
+			   hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
+
+			   Ellipse(hdc, rc.left, rc.top, rc.right, rc.bottom);
+
+			   // Create and select the brush that will be used to fill the polygon
+			   hBrush    = CreateSolidBrush(colFore);
+			   SelectObject(hdc, hBrush);
+
+			   CalcPoints(rc);
+			   Polygon(hdc, &m_arrPoint[0], m_nSides);
+
+			   // Select back the old pen and brush and delete the brush we created
+			   SelectObject(hdc, hOldPen);
+			   SelectObject(hdc, hOldBrush);
+			   DeleteObject(hBrush);
+
+			   return S_OK;
+			}
+	PolyCtl.cpp添加代码:
+		void CPolyCtl::CalcPoints(const RECT& rc)
+		{
+		   const double pi = 3.14159265358979;
+		   POINT   ptCenter;
+		   double  dblRadiusx = (rc.right - rc.left) / 2;
+		   double  dblRadiusy = (rc.bottom - rc.top) / 2;
+		   double  dblAngle = 3 * pi / 2;          // Start at the top
+		   double  dblDiff  = 2 * pi / m_nSides;   // Angle each side will make
+		   ptCenter.x = (rc.left + rc.right) / 2;
+		   ptCenter.y = (rc.top + rc.bottom) / 2;
+
+		   // Calculate the points for each side
+		   for (int i = 0; i < m_nSides; i++)
+		   {
+		      m_arrPoint[i].x = (long)(dblRadiusx * cos(dblAngle) + ptCenter.x + 0.5);
+		      m_arrPoint[i].y = (long)(dblRadiusy * sin(dblAngle) + ptCenter.y + 0.5);
+		      dblAngle += dblDiff;
+		   }
+		}
+	VS菜单"生成"-->"生成Polygon";
+	右键PolyCtl.htm在浏览器中打开，复制地址在IE中打开，可以查看效果.
+	******************************
+	可选的ActiveX容器测试方法
+	******************************
+	此部分需要重新搜索 MSDN的链接失效
+
+	*********************************************
+	添加 ClickIn 和一个 ClickOut 事件向ATL控件
+	*********************************************
+	切换到类视图, 右键_IPolyCtlEvents(下划线代表内部类型), "添加"->"添加方法":
+	ReturnType:void, MethodName: ClickIn; LONG x, LONG y;
+	同样操作, void ClickOut(LONG x, LONG y);
+	鼠标右键单击"Polygon.idl"文件，弹出菜单中单击【Compile Polygon.idl】，编译;
+	
+	实现连接点接口:
+	鼠标右键CPolyCtl-->添加-->添加连接点(注意不是实现接口!!): 双击_IPolyCtlEvents,添加到"实现接口"列表下, 点击完成按钮.
+	
+	添加WM_LBUTTONDOWN消息处理程序
+	类视图, 鼠标右键CPolyCtl-->属性-->消息选项卡-->WM_LBUTTONDOWN,在下拉菜单中点击添加消息处理函数;
+	LRESULT CPolyCtl::OnLButtonDown(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM lParam, BOOL& /*bHandled*/)
+	{
+	   HRGN hRgn;
+	   WORD xPos = LOWORD(lParam);  // horizontal position of cursor
+	   WORD yPos = HIWORD(lParam);  // vertical position of cursor
+
+	   CalcPoints(m_rcPos);
+
+	   // Create a region from our list of points
+	   hRgn = CreatePolygonRgn(&m_arrPoint[0], m_nSides, WINDING);
+
+	   // If the clicked point is in our polygon then fire the ClickIn
+	   //  event otherwise we fire the ClickOut event
+	   if (PtInRegion(hRgn, xPos, yPos))
+	      Fire_ClickIn(xPos, yPos);
+	   else
+	      Fire_ClickOut(xPos, yPos);
+
+	   // Delete the region that we created
+	   DeleteObject(hRgn);
+	   return 0;
+	}
+
+
+ATL Basic Tutorial:
+https://www.cnblogs.com/hanford/p/6103127.html VC6.0
+https://msdn.microsoft.com/zh-cn/library/xsaes4s9.aspx VS2010
+
+
+
+做成教程 博文 入书 代码 入库
+最终效果图:
+详细步骤:
+截图
+

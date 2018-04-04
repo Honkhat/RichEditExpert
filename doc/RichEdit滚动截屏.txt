@@ -1,0 +1,38 @@
+http://www.fx114.net/qa-33-922.aspx
+
+如果只能截屏client区域, 那么可以Scroll()然后把几张图片拼接到一起?!
+
+https://bbs.csdn.net/topics/80409083 HOOK WM_PAINT消息，绘制到自己的Canvas上
+https://www.cnblogs.com/findumars/p/4999198.html  Delphi RichEdit的内容保存为图片
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb787605%28v=vs.85%29.aspx MSDN Windowless RichEdit 比较全! 奇怪没有EM_SETLIMITTEXT 有EM_EXLIMITTEXT!
+
+
+https://msdn.microsoft.com/zh-cn/library/windows/desktop/bb788020 EM_FORMATRANGE MESSAGE
+[wParam]    Specifies whether to render the text. If this parameter is not zero, the text is rendered. Otherwise, the text is just measured.
+[lParam]    A FORMATRANGE structure containing information about the output device, or NULL to free information cached by the control.
+
+
+HBITMAP 转 HDC
+https://www.cnblogs.com/open-fu/p/3337810.html
+
+hdc = CreateCompatibleDC(NULL);
+hbmp = CreateCompatibleBitmap(hdc, Width, High);
+SelectObject (hdc, hbmp);
+
+那么在删除的时候，这样删除对吗？
+DeleteDC(hdc);
+DeleteObject(hbmp);
+
+
+
+EM_GETTEXTLENGTHEX
+https://msdn.microsoft.com/zh-cn/magazine/bb787915
+
+EM_FORMATRANGE
+https://msdn.microsoft.com/zh-cn/library/windows/desktop/bb788020
+[wParam]    Specifies whether to render the text. If this parameter is not zero, the text is rendered. Otherwise, the text is just measured.
+[lParam]    A FORMATRANGE structure containing information about the output device, or NULL to free information cached by the control.
+
+Bitmap SaveToFile()
+http://www.cppblog.com/zaccheo/archive/2012/08/30/188744.aspx

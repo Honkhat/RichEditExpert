@@ -1,0 +1,71 @@
+https://msdn.microsoft.com/zh-cn/dd238515.aspx C++ C# F# Samples MSDN
+链接: https://pan.baidu.com/s/1PLozQCTrDGb2_cLLuRB6OQ 密码: uqm8 人工智能资料合集 抓紧保存！
+http://www.ndiy.cn/thread-33934-1-1.html 各种大学课程汇总
+
+courseera
+	Honkhat20/hejian0221 worksdata@163.com
+
+https://www.douban.com/group/topic/44748285/ 各种国外的大学课程
+
+https://www.leiphone.com/news/201701/0milWCyQO4ZbBvuW.html?from=timeline&viewType=weixin
+
+http://open.163.com/special/opencourse/machinelearning.html Andrew Ng
+
+http://www.tenouk.com/cplusmfcdotnet.html
+
+
+
+http://blog.163.com/ruby_study/blog/static/23868006520155604715101/ sqlite内置函数
+https://blog.csdn.net/aflyeaglenku/article/details/50978986 sqlite recursive CTE
+https://www.cnblogs.com/sheng-jie/p/6347835.html cte oracle
+https://blog.csdn.net/tangaowen/article/details/6198238 OLE 
+https://www.cnblogs.com/kissdodog/archive/2013/06/24/3153012.html CTE 
+
+https://bbs.csdn.net/topics/390195330 RichEdit失去焦点仍然保持选中
+https://bbs.csdn.net/wap/topics/390354424 RichEdit提取图片
+http://www.cnblogs.com/setoutsoft/p/4227529.html 启程软件获取OLE
+https://msdn.microsoft.com/en-us/library/599w5e7x(v=vs.140).aspx ATL AND OTHER TUTORIAL MSDN
+https://www.codeproject.com/Articles/96/Beginner-s-Tutorial-COM-ATL-Simple-Project 
+https://social.msdn.microsoft.com/Forums/en-US/7c227efd-64b9-42e6-80ef-268757dcea5c/atl-polygon-activex-control-example-unidentified-identifier-error?forum=vcgeneral ATL POLOGON SAMPLE
+CMAKE PRACTICE
+
+
+https://blog.csdn.net/wenzhou1219/article/details/78303690 HBITMAP USEFUL
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb761661(v=vs.85).aspx EM_SETSEL
+https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa453018(v=msdn.10) EM_POSFORMCHAR
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb761566 EM_CHARFROMPOS
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb761572(v=vs.85).aspx EM_GETCUEBANNER
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb788007(v=vs.85).aspx EM_EXSETSEL
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb788001(v=vs.85).aspx EM_EXGETSEL
+https://msdn.microsoft.com/zh-cn/library/azure/bb774304 EM_STREAMOUT
+https://technet.microsoft.com/zh-cn/library/bb774195.aspx/ EM_GETTEXTLENGTHEX
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb787997(v=vs.85).aspx EM_DISPLAYBAND
+https://msdn.microsoft.com/en-us/library/windows/desktop/hh768371(v=vs.85).aspx EM_GETTABLEPARMS
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb788031(v=vs.85).aspx EM_GETEDITSTYLE
+
+
+
+https://blog.csdn.net/haoekin/article/details/8877979 构建GifOle ATL工程
+
+
+
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/dd542673(v=vs.85).aspx IEnumFORMATETC::Next
+https://msdn.microsoft.com/en-us/library/windows/desktop/ms683979(v=vs.85).aspx IDataObject::EnumFormatEtc
+
+
+
+https://www.zybuluo.com/chanvee/note/10789 CMD MARKDOWN
+
+
+https://blog.csdn.net/xiliang_pan/article/details/7081395 T2A
+
+https://blog.csdn.net/xiaoxiaoyeyaya/article/details/42541419 C++ GOOD LIBEV
+
+
+http://www.biblioscape.com/rtf15_spec.htm RTF SPEC
+https://msdn.microsoft.com/en-us/library/aa140283(v=office.10).aspx#rtfspec_tabledef RTF TABLE
+
+
+https://vulkan.lunarg.com/doc/sdk/1.1.70.1/windows/getting_started.html VULKAN.LUNARG

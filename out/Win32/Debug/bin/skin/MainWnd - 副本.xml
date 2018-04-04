@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Window size="1200, 700" sizebox="4,4,4,4" caption="0,0,0,40" mininfo="40,30" roundcorner="10,10"> <!--不设置maxinfo就可以最大化了;maxinfo="1200,900"-->
+	<Include source="MyStyle.xml"/> <!--共享Style的方法-->
+	<!-- 单独指定Font的方法:
+	<Font shared="true" id="0" name="Microsoft YaHei" size="14" bold="true" italic="true" default="true"/>
+	<Font shared="true" id="1" name="Verdana" size="20" bold="true" italic="true" />
+	-->
+	<Default shared="true" name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='btnMy.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='btnMy.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='btnMy.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='btnMy.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+	<Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1hotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button2normalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2hotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,6,8,17&apos;&quot;"/>
+	<Default name="HScrollBar" value="button1normalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1hotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button2normalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2hotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;scrollbar.png&apos; source=&apos;0,6,8,17&apos;&quot;"/>
+	<!--!!!!!!!!!!!!有时间写一个单独的好的使用duilib的框架  和 每个控件的使用Demo，完整属性列表!!!!!!!!!!!!-->
+	<!--
+		目前存在的问题:
+			1. 双击Caption, 不能正常的最大化;
+			2. 拖动窗口，部分窗体被遮盖后，再拖动回来，绘制的颜色分块了;
+		问题解决:
+			1. 窗口内没有实际有效的UI元素; (Layout不算)
+			2. 同1;
+	-->
+	
+	<VerticalLayout name="bg" width="800" height="600" bkcolor="#FFF7F7F7"><!--暂不清楚设置后面的颜色会有什么效果,查源码分析!bkcolor2="#00FFFFFF" bordercolor="#00FFFFFF" focusbordercolor="#00FFFFFF"-->
+		<HorizontalLayout height="40" name="caption" bkcolor="#FF7F7F7F"> <!--Caption Area-->
+			<!--Text是从Label继承过来的, 所以静态文字还是使用Label吧-->
+			<Label text="Dui + Rich Edit!" font="11" float="false" padding="6,6,0,0" align="left" textcolor="#FFEE7942" disabledtextcolor="#00606060" />
+			<Control /> <!--占位控件使用一个基类控件实例即可-->
+			<!--右对齐的实现: 添加一个不设置宽度的占位控件即可，duilib会自动拉伸填满整个Layout-->
+			<HorizontalLayout padding="0,10,6,10" width="80">
+				<Button name="minbtn" float="false" width="20" textcolor="#FF000000" disabledtextcolor="#00606060" align="center" normalimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;0,0,136,136&apos;" hotimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;136,0,272,136&apos;" pushedimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;272,0,408,136&apos;" disabledimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;408,0,544,136&apos;" />
+				<Button name="maxbtn" float="false" padding="10,0,0,0" width="20"                                                 normalimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;0,136,136,272&apos;" hotimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;136,136,272,272&apos;" pushedimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;272,136,408,272&apos;" disabledimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;408,136,544,272&apos;" />
+				<Button name="closebtn" float="false" padding="10,0,0,0" width="20"                                               normalimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;0,272,136,408&apos;" hotimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;136,272,272,408&apos;" pushedimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;272,272,408,408&apos;" disabledimage="file=&apos;BtnMinRestoreClose.png&apos; source=&apos;408,272,544,408&apos;" />
+			</HorizontalLayout>
+		</HorizontalLayout>
+	
+		<HorizontalLayout name="body" bkcolor="#EBEBEB" bkcolor2="#FF7D9EC0">
+			<VerticalLayout width="200" rightbordersize="2" bordercolor="#FF836FFF" borderstyle="4">
+			</VerticalLayout>
+			
+			<VerticalLayout>
+				<HorizontalLayout>
+					<NativeRichEdit bkcolor="#ffff0000" />
+					<Control />
+				</HorizontalLayout>
+				<HorizontalLayout>
+				</HorizontalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+		
+		<Label name="foot" height="90" bkcolor="#FFD0D0D0">
+		</Label>	
+	</VerticalLayout>
+</Window>

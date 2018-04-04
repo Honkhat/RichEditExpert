@@ -1,0 +1,17 @@
+*******************************
+一次性读取文件全部内容
+*******************************
+
+http://blog.csdn.net/vinson0526/article/details/50829627
+iostream著名专家Dietmar Kuehl给出了两个读取方法
+std::ifstream in("some.file");
+std::isreambuf_iterator<char> begin(in);
+std::isreambuf_iterator<char> end;
+std::string some_str(begin, end);
+或
+std::ifstream in("some.file");
+std::ostringstream tmp;
+tmp << in.rdbuf();
+std::string str = tmp.str();
+
+

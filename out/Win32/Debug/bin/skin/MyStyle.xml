@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StyleConfig>
+ 
+  <!--font index 0-->
+  <Font shared="true" id="0" name="Microsoft YaHei" size="14" bold="false" italic="false"  default="true"/>
+  <!--font index 1-->
+  <Font shared="true" id="1" name="Microsoft YaHei" size="14" bold="true" italic="false" />
+  <!--font index 2-->
+  <Font shared="true" id="2" name="Microsoft YaHei" size="16" bold="false" italic="false" />
+  <!--font index 3-->
+  <Font shared="true" id="3" name="Microsoft YaHei" size="16" bold="true" italic="false" />
+  <!--font index 4-->
+  <Font shared="true" id="4" name="Microsoft YaHei" size="18" bold="false" italic="false" />
+  <!--font index 5-->
+  <Font shared="true" id="5" name="Microsoft YaHei" size="18" bold="true" italic="false" />
+  <!--font index 6-->
+  <Font shared="true" id="6" name="Microsoft YaHei" size="20" bold="false" italic="false" />
+  <!--font index 7-->
+  <Font shared="true" id="7" name="Microsoft YaHei" size="20" bold="true" italic="false" />
+  <!--font index 8-->
+  <Font shared="true" id="8" name="Microsoft YaHei" size="22" bold="false" italic="false" />
+  <!--font index 9-->
+  <Font shared="true" id="9" name="Microsoft YaHei" size="22" bold="true" italic="false" />
+  <!--font index 10-->
+  <Font shared="true" id="10" name="Microsoft YaHei" size="24" bold="false" italic="false" />
+  <!--font index 11-->
+  <Font shared="true" id="11" name="Microsoft YaHei" size="24" bold="true" italic="false" />
+  <!--font index 12-->
+  <Font shared="true" id="12" name="Microsoft YaHei" size="26" bold="false" italic="false" />
+  <!--font index 13-->
+  <Font shared="true" id="13" name="Microsoft YaHei" size="26" bold="true" italic="false" />
+  <!--font index 14-->
+  <Font shared="true" id="14" name="Microsoft YaHei" size="28" bold="false" italic="false" />
+    <!--font index 15-->
+  <Font shared="true" id="15" name="Microsoft YaHei" size="28" bold="true" italic="false" />
+	<!--font index 16-->
+  <Font shared="true" id="16" name="Microsoft YaHei" size="30" bold="false" italic="false" />
+  <!--font index 17-->
+  <Font shared="true" id="17" name="Microsoft YaHei" size="30" bold="true" italic="false" />
+  
+ 
+  <Font shared="true" id="50" name="Microsoft YaHei" size="20" bold="true" italic="true" />
+  
+  
+  <!--Control style -->
+  <!--
+  <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,85,15,100&apos; mask=&apos;#FFFF00FF&apos;&quot; button1hotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,85,32,100&apos; mask=&apos;#FFFF00FF&apos;&quot; button1pushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,85,49,100&apos; mask=&apos;#FFFF00FF&apos;&quot; button1disabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,85,66,100&apos; mask=&apos;#FFFF00FF&apos;&quot; button2normalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,102,15,117&apos; mask=&apos;#FFFF00FF&apos;&quot; button2hotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,102,32,117&apos; mask=&apos;#FFFF00FF&apos;&quot; button2pushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,102,49,117&apos; mask=&apos;#FFFF00FF&apos;&quot; button2disabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,102,66,117&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbnormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,119,15,134&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,119,32,134&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,119,49,134&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbdisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,119,66,134&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railnormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,137,15,151&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,137,32,151&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,137,49,151&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; raildisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,137,66,151&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bknormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,153,15,168&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,153,32,168&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,153,49,168&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkdisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,153,66,168&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,0,15,15&apos; mask=&apos;#FFFF00FF&apos;&quot; button1hotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,0,32,15&apos; mask=&apos;#FFFF00FF&apos;&quot; button1pushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,0,49,15&apos; mask=&apos;#FFFF00FF&apos;&quot; button1disabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,0,66,15&apos; mask=&apos;#FFFF00FF&apos;&quot; button2normalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,17,15,32&apos; mask=&apos;#FFFF00FF&apos;&quot; button2hotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,17,32,32&apos; mask=&apos;#FFFF00FF&apos;&quot; button2pushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,17,49,32&apos; mask=&apos;#FFFF00FF&apos;&quot; button2disabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,17,66,32&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbnormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,34,15,49&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,34,32,49&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,34,49,49&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbdisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,34,66,49&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railnormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,51,15,66&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,51,32,66&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,51,49,66&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; raildisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,51,66,66&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bknormalimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;0,68,15,83&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkhotimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;17,68,32,83&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkpushedimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;34,68,49,83&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkdisabledimage=&quot;file=&apos;Control_Scrollbar.png&apos; source=&apos;51,68,66,83&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; " />
+  -->
+  <!--font color-->
+  <!--Frame-->
+  <!--Frame left option 4c5b6e select ffffff disable a0a0a0-->
+  <!--Frame foot txtcolor 6e6e6e-->
+  <!--Frame foot HS ff665e-->
+  <!--Archive-->
+  <!--Archive btn textcolor  4c5b6e  disablecolor a0a0a0   -->
+  <!--Archive lsit header item color 4c5b6e font=""-->
+  <!--Archive list itemselectcolor 4c5b6e font="0" 6e6e6e -->
+  <!--Archive series  4c5b6e -->
+  <!--Study-->
+  
+  <!--Study Header back 4c5d6e a0a0a0  endStudy ffffff a0a0a0-->
+  <!--Study Register btn 4c5b6e a0a0a0 lable 6e6e6e -->
+  <!--Study Protocol option 4c5b6e ffffff a0a0a0 lable 6e6e6e-->
+  <!--Service-->
+  <!--Service right text color 4c5b6e select ffffff disable a0a0a0-->
+  <!--Service TureSeasoning WarmUp lable title 4c5b6e   1 2 3 4   ffffff  a0a0a0  foot disabled a0a0a0 scaning ffffff will scan 4c5b6e btn 4c5b6e a0a0a0-->
+  
+  
+</StyleConfig>
